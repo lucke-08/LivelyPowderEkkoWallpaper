@@ -1,0 +1,29 @@
+{
+  "imgTopSelect": {
+    "type": "folderDropdown",
+    "value": "top.jpg",
+    "text": "First layer image",
+    "filter": "*.jpg|*.png",
+    "folder": "photos"
+  },
+  "imgBottomSelect": {
+    "type": "folderDropdown",
+    "value": "bottom.jpg",
+    "text": "Second layer image",
+    "filter": "*.jpg|*.png",
+    "folder": "photos"
+  },
+  "circleInerColor": {
+    "text": "Circle internal color",
+    "type": "color",
+    "value": "#000000"
+  },
+  "circleRadius": {
+    "max": 100,
+    "min": 0,
+    "tick": 25,
+    "text": "Circle Radius",
+    "type": "slider",
+    "value": 50
+  }
+}

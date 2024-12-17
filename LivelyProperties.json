@@ -1,29 +1,56 @@
 {
+  "label": {
+    "help":"In this section you can customize the two background images, the formats supported are .jpg .png for static photos, and .webm for animated videos",
+    "type": "label",
+    "value": "Images Customization"
+  },
   "imgTopSelect": {
+    "help":"Insert all the images you like, remember that by updating this image you will change the photo that is inside the circle NOW",
     "type": "folderDropdown",
-    "value": "top.jpg",
-    "text": "First layer image",
-    "filter": "*.jpg|*.png",
-    "folder": "photos"
+    "value": "powder.jpg",
+    "text": "Inside Circle Image",
+    "filter": "*.jpg|*.png|*.webm",
+    "folder": "media"
   },
   "imgBottomSelect": {
+    "help":"Insert all the images you like, remember that updating this image will change the photo outside the circle NOW",
     "type": "folderDropdown",
-    "value": "bottom.jpg",
-    "text": "Second layer image",
-    "filter": "*.jpg|*.png",
-    "folder": "photos"
+    "value": "ekko.jpg",
+    "text": "Outside Circle image",
+    "filter": "*.jpg|*.png|*.webm",
+    "folder": "media"
   },
-  "circleInerColor": {
-    "text": "Circle internal color",
-    "type": "color",
-    "value": "#000000"
+  "label1": {
+    "help":"In this section you can customize various parameters of the circle, the images will not be affected",
+    "type": "label",
+    "value": "Circle Customization"
   },
   "circleRadius": {
-    "max": 100,
-    "min": 0,
-    "tick": 25,
-    "text": "Circle Radius",
+    "help":"This parameter changes the size of the circle in pixels.",
+    "max": 250,
+    "min": 50,
+    "text": "Circle Diameter",
     "type": "slider",
-    "value": 50
+    "value": 150
+  },
+  "ghostMode": {
+    "help":"This checkbox allows you to make the image inside the circle semi-transparent, making the subject inside the circle appear as a ghost.",
+    "type": "checkbox",
+    "value": true,
+    "text": "Ghost Mode (semi-transparent)"
+  },
+  "circleColor": {
+    "help":"If you want the inside of the circle to have a color, this is the parameter you need.",
+    "text": "Circle Color",
+    "type": "color",
+    "value": "#ffffff"
+  },
+  "circleColorOpacity": {
+    "help":"This parameter allows you to increase or decrease the intensity of the color assigned above.",
+    "text": "Circle Color Opacity",
+    "type": "slider",
+    "max": 50,
+    "min": 0,
+    "value": 10
   }
 }

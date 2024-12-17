@@ -1,0 +1,73 @@
+  body {
+    background: black;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
+    cursor: url(https://sweezy-cursors.com/wp-content/uploads/cursor/arcane-mel-ring/arcane-mel-ring-cursor-32x32.png), auto;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  body::selection {
+    background: transparent;
+  }
+
+  :root {
+    --circle-color: rgba(255, 255, 255, 0.1);
+    --circle-ghost: rgba(0, 0, 0, 0.5);
+    --circle-size: 150px;
+    --mask-position: 0px 0px;
+  }
+
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  .image.above {
+    z-index: 2;
+    opacity:inherit;
+    mask-image: radial-gradient(circle, var(--circle-ghost) var(--circle-size), rgba(0, 255, 0, 0) calc(var(--circle-size) + 50px));
+    -webkit-mask-image: radial-gradient(circle, var(--circle-ghost) calc(var(--circle-size)*(3/4)), rgba(0, 0, 0, 0) var(--circle-size));
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: var(--mask-position);
+    -webkit-mask-position: var(--mask-position);
+  }
+  .image.below {
+    z-index: 1;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--circle-color);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) var(--circle-size), rgba(0, 255, 0, 0) calc(var(--circle-size) + 50px));
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) calc(var(--circle-size)*(3/4)), rgba(0, 0, 0, 0) var(--circle-size));
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: var(--mask-position);
+    -webkit-mask-position: var(--mask-position);
+    z-index: 3;
+  }

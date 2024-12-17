@@ -2,11 +2,11 @@
   "AppVersion": "0.9.5.0",
   "Title": "Powder & Ekko",
   "Thumbnail": "preview.png",
-  "Desc": "An interactive wallpaper of Arcane",
-  "Author": "Discord #Lucke_08",
-  "License": "Check license.txt",
+  "Desc": "An interactive Arcane wallpaper",
+  "Author": "Lucke_08",
+  "License": "See license.txt",
+  "Contact": "https://github.com/lucke-08/LivelyPowderEkkoWallpaper",
   "Type": 1,
   "FileName": "main.html",
-  "Arguments": null,
-  "IsAbsolutePath": false
+  "Version": 2
 }
